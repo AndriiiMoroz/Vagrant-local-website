@@ -1,4 +1,5 @@
 .git/
 .vagrant/
-.webapp/website/__pycache__
-.webapp/instance/database.db
+webapp/website/__pycache__/
+webapp/instance/*
+!webapp/instance/.gitkeep
