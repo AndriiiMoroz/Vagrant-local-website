@@ -1,14 +1,19 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from os import path
 from flask_login import LoginManager
+try:
+    from secret import gen_secret
+except ImportError:
+    from .secret import gen_secret
 
 db = SQLAlchemy()
 DB_NAME = "database.db"
 
 def create_app():
     app = Flask(__name__)
-    app.config['SECRET_KEY'] = 'hgiudahgdasgoiasdoig sadjgisadjgidsag'
+    code = ''
+    code = gen_secret()
+    app.config['SECRET_KEY'] = code
     app.config['SQLALCHEMY_DATABASE_URI']=f'sqlite:///{DB_NAME}'
     db.init_app(app)
     

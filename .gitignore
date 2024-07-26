@@ -1,5 +1,6 @@
 .git/
 .vagrant/
 webapp/website/__pycache__/
+webapp/secret.txt
 webapp/instance/*
 !webapp/instance/.gitkeep
