@@ -1,2 +1,4 @@
 .git/
 .vagrant/
+.webapp/website/__pycache__
+.webapp/instance/database.db
